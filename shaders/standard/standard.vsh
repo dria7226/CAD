@@ -42,7 +42,7 @@ void main()
 
 		gl_Position.w = 1.0;
 
-		v_vColor = vec4(vec3(0xba, 0x36, 0x31), 1.0);//*dot(in_Position - camera_position, in_Normal) ,1.0);
+		v_vColor = vec4(vec3(0.7294, 0.2117, 0.1922)*dot((in_Position - camera_position)*length(in_Position - camera_position), in_Normal)*-0.5 ,1.0);
 		v_vTexcoord = in_TextureCoord;
 		return;
 	}

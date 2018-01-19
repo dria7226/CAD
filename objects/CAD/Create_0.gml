@@ -18,6 +18,7 @@ timers = ds_map_create();
 
 //renderer
 gpu_set_tex_filter(true);
+gpu_set_cullmode(cull_counterclockwise);
 vertex_format_begin();
 vertex_format_add_position_3d();
 vertex_format_add_normal();

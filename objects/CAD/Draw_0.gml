@@ -1,6 +1,6 @@
 surface_set_target(surfaces[mode]);
+
 draw_surface(Background.surface, 0,0);
-surface_reset_target();
 
 shader_set(standard);
 
@@ -22,6 +22,9 @@ switch(mode)
 }
 
 shader_reset();
+
+surface_reset_target();
+
 
 if(ds_map_exists(timers, "mode_switch"))
 {
