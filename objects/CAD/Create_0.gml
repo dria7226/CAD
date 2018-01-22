@@ -21,9 +21,10 @@ gpu_set_tex_filter(true);
 gpu_set_cullmode(cull_counterclockwise);
 vertex_format_begin();
 vertex_format_add_position_3d();
-vertex_format_add_normal();
+vertex_format_add_color();
 vertex_format_add_texcoord();
 global.vertex_format = vertex_format_end();
+global.clay_color = [0.7294, 0.2117, 0.1922];
 resize_routine();
 
 Background.surface = surface_create(CAD.w_width, CAD.w_height);
@@ -32,3 +33,5 @@ for(var i = 0; i < 3; i++)
 {
 	surfaces[i] = surface_create(CAD.w_width, CAD.w_height);
 }
+
+shader_set(standard);

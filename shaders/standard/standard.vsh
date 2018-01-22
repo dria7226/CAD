@@ -1,10 +1,11 @@
 attribute vec3 in_Position;                 // (x,y,z)
-attribute vec3 in_Normal;					// (x,y,z)
+attribute vec4 in_Colour;					// (r,g,b)
 attribute vec2 in_TextureCoord;             // (u,v)
 
 varying vec2 v_vTexcoord;
 varying vec4 v_vColor;
 
+uniform vec3 offset;
 uniform vec3 camera_position;
 uniform float camera_yaw, camera_pitch;
 uniform float near_clip;
@@ -19,10 +20,20 @@ void rotate(inout vec2 point, float angle);
 
 void main()
 {
-	//normal rendering
+	//standard rendering
 	if(mode == 0)
 	{
-		vec3 local = in_Position;
+		vec4 object_space_pos = vec4( in_Position.x, in_Position.y, 1.0, 1.0);
+		gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] * object_space_pos;
+		
+		v_vColor = in_Colour;
+		v_vTexcoord = in_TextureCoord;
+	}
+	
+	//3D rendering
+	if(mode == 1)
+	{
+		vec3 local = in_Position + offset;
 
 		//camera transformation
 		local -= camera_position;
@@ -42,49 +53,18 @@ void main()
 
 		gl_Position.w = 1.0;
 
-		v_vColor = vec4(vec3(0.7294, 0.2117, 0.1922)*dot((in_Position - camera_position)*length(in_Position - camera_position), in_Normal)*-0.5 ,1.0);
+		v_vColor = vec4(v_a,1.0);//*dot((in_Position - camera_position)*length(in_Position - camera_position), in_Normal)*-0.5 ,1.0);
 		v_vTexcoord = in_TextureCoord;
-		return;
 	}
 		
 	//background rendering
-	if(mode == 1)
+	if(mode == 2)
 	{
 		vec4 object_space_pos = vec4( in_Position.x, in_Position.y, 1.0, 1.0);
 		gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] * object_space_pos;
 	
 		v_vColor = vec4(v_a*(0.5 + gl_Position.y*0.5) + v_b*(0.5 - gl_Position.y*0.5), abs(gl_Position.y*0.5));
 		v_vTexcoord = in_TextureCoord;
-		return;
-	}
-		
-	//code rendering
-	if(mode == 2)
-	{
-		
-		
-		v_vColor = vec4(0xba, 0x36, 0x31,1.0);
-		v_vTexcoord = in_TextureCoord;
-		return;
-	}
-	
-	//model rendering
-	if(mode == 3)
-	{
-		
-		v_vColor = vec4(0xba, 0x36, 0x31,1.0);
-		v_vTexcoord = in_TextureCoord;
-		return;
-	}
-		
-	//animation rendering
-	if(mode == 4)
-	{
-		
-		
-		v_vColor = vec4(0xba, 0x36, 0x31,1.0);
-		v_vTexcoord = in_TextureCoord;
-		return;
 	}
 }
 

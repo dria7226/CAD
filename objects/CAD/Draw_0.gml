@@ -1,8 +1,7 @@
 surface_set_target(surfaces[mode]);
 
+shader_set_uniform_i(shader_get_uniform(standard, "mode"), 0);
 draw_surface(Background.surface, 0,0);
-
-shader_set(standard);
 
 background_draw();
 
@@ -21,9 +20,10 @@ switch(mode)
 	break;
 }
 
-shader_reset();
+//shader_reset();
 
 surface_reset_target();
+shader_set_uniform_i(shader_get_uniform(standard, "mode"), 0);
 
 
 if(ds_map_exists(timers, "mode_switch"))

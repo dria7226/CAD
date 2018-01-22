@@ -2,6 +2,8 @@
 
 if(enabled)
 {	
+	shader_reset();
+	
 	var item_group = groups[ds_stack_top(stack)];
 	var alloted_angle = 2*pi/array_length_1d(item_group);
 	
@@ -78,4 +80,6 @@ if(enabled)
 			
 		}
 	}
+	
+	shader_set(standard);
 }
