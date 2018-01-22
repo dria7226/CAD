@@ -4,29 +4,28 @@ vertex_begin(cylinder, global.vertex_format);
 
 var MAX = 32;
 
-for(var i = 0; i < MAX; i++)
+var first_X = cos(0)/2;
+var first_Y = sin(0)/2;
+for(var i = 1; i <= MAX; i++)
 {
-	var X_a = cos(i*2*pi/MAX)/2;
-	var Y_a = sin(i*2*pi/MAX)/2;
-	
-	var X_b = cos((i+1)*2*pi/MAX)/2;
-	var Y_b = sin((i+1)*2*pi/MAX)/2;
+	var second_X = cos(i*2*pi/MAX)/2;
+	var second_Y = sin(i*2*pi/MAX)/2;
 	
 	//caps
-	vertex_position_3d(cylinder, X_b, Y_b,0.5);
+	vertex_position_3d(cylinder, second_X, second_Y,0.5);
 	vertex_color(cylinder, 0,1.0);
 	vertex_texcoord(cylinder, 0, 0);
-	vertex_position_3d(cylinder, X_a, Y_a,0.5);
+	vertex_position_3d(cylinder, first_X, first_Y,0.5);
 	vertex_color(cylinder, 0,1.0);
 	vertex_texcoord(cylinder, 0, 0);
 	vertex_position_3d(cylinder, 0, 0, 0.5);
 	vertex_color(cylinder, 0,1.0);
 	vertex_texcoord(cylinder, 0, 0);
 	
-	vertex_position_3d(cylinder, X_a, Y_a,-0.5);
+	vertex_position_3d(cylinder, first_X, first_Y,-0.5);
 	vertex_color(cylinder, 0,1.0);
 	vertex_texcoord(cylinder, 0, 0);
-	vertex_position_3d(cylinder, X_b, Y_b,-0.5);
+	vertex_position_3d(cylinder, second_X, second_Y,-0.5);
 	vertex_color(cylinder, 0,1.0);
 	vertex_texcoord(cylinder, 0, 0);
 	vertex_position_3d(cylinder, 0, 0, -0.5);
@@ -34,25 +33,28 @@ for(var i = 0; i < MAX; i++)
 	vertex_texcoord(cylinder, 0, 0);
 	
 	//body
-	vertex_position_3d(cylinder, X_a, Y_a,-0.5);
+	vertex_position_3d(cylinder, first_X, first_Y,-0.5);
 	vertex_color(cylinder, 0,1.0);
 	vertex_texcoord(cylinder, 0, 0);
-	vertex_position_3d(cylinder, X_b, Y_b, 0.5);
+	vertex_position_3d(cylinder, second_X, second_Y, 0.5);
 	vertex_color(cylinder, 0,1.0);
 	vertex_texcoord(cylinder, 0, 0);
-	vertex_position_3d(cylinder, X_b, Y_b,-0.5);
+	vertex_position_3d(cylinder, second_X, second_Y,-0.5);
 	vertex_color(cylinder, 0,1.0);
 	vertex_texcoord(cylinder, 0, 0);
 	
-	vertex_position_3d(cylinder, X_b, Y_b, 0.5);
+	vertex_position_3d(cylinder, second_X, second_Y, 0.5);
 	vertex_color(cylinder, 0,1.0);
 	vertex_texcoord(cylinder, 0, 0);
-	vertex_position_3d(cylinder, X_a, Y_a,-0.5);
+	vertex_position_3d(cylinder, first_X, first_Y,-0.5);
 	vertex_color(cylinder, 0,1.0);
 	vertex_texcoord(cylinder, 0, 0);
-	vertex_position_3d(cylinder, X_a, Y_a, 0.5);
+	vertex_position_3d(cylinder, first_X, first_Y, 0.5);
 	vertex_color(cylinder, 0,1.0);
 	vertex_texcoord(cylinder, 0, 0);
+	
+	first_X = second_X;
+	first_Y = second_Y;
 	
 }
 
