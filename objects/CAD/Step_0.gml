@@ -13,7 +13,7 @@ if(keyboard_check(vk_tab))
 if(mouse_check_button(mb_left) && !Selection_Wheel.enabled)
 {
 			Camera.pitch += (mouse_x - last_mouse_x)*mouse_scaling;
-			Camera.yaw += (mouse_y - last_mouse_y)*mouse_scaling;
+			Camera.yaw -= (mouse_y - last_mouse_y)*mouse_scaling;
 			Camera.yaw = min(pi/2, Camera.yaw); Camera.yaw = max(-pi/2, Camera.yaw);
 	
 			//yaw rotation

@@ -4,12 +4,14 @@ vertex_begin(sphere, global.vertex_format);
 
 var MAX = 32;
 
-var first_X = cos(0)/2;
-var first_Y = sin(0)/2;
+var radius = 1;
+
+var first_X = cos(0)/2*radius;
+var first_Y = sin(0)/2*radius;
 for(var angle = 2*pi/MAX; angle < 2*pi; angle += 2*pi/MAX)
 {
-	var second_X = cos(angle+2*pi/MAX)/2;
-	var second_Y = sin(angle+2*pi/MAX)/2;
+	var second_X = cos(angle+2*pi/MAX)/2*radius;
+	var second_Y = sin(angle+2*pi/MAX)/2*radius;
 	
 	//caps
 	vertex_position_3d(sphere, first_X*sin(2*pi/MAX), first_Y*sin(2*pi/MAX), cos(2*pi/MAX)/2);
@@ -32,11 +34,11 @@ for(var angle = 2*pi/MAX; angle < 2*pi; angle += 2*pi/MAX)
 	vertex_color(sphere, 0,1.0);
 	vertex_texcoord(sphere, 0,0);
 	
-	var first_Z = cos(2*pi/MAX)/2;
+	var first_Z = cos(2*pi/MAX)/2*radius;
 	for(var i = 2*2*pi/MAX; i < pi*(1 - 2/MAX); i += 2*pi/MAX)
 	{	
 		//body
-		var second_Z = cos(i+2*pi/MAX)/2;
+		var second_Z = cos(i+2*pi/MAX)/2*radius;
 		
 		vertex_position_3d(sphere, first_X*sin(i), first_Y*sin(i), first_Z);
 		vertex_color(sphere, 0,1.0);

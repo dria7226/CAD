@@ -1,124 +1,127 @@
 var cube = vertex_create_buffer();
 
+var width = 1;
+width /= 2;
+
 vertex_begin(cube, global.vertex_format);
 
-vertex_position_3d(cube, -0.5,-0.5,-0.5);
-vertex_color(cube, 0, 0.5);
+vertex_position_3d(cube, -width, -width, -width);
+vertex_color(cube, 0, 1.0);
 vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, -0.5,-0.5,0.5);
-vertex_color(cube, 0, 0.5);
+vertex_position_3d(cube, -width, -width, width);
+vertex_color(cube, 0, 1.0);
 vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, 0.5,-0.5,0.5);
-vertex_color(cube, 0, 0.5);
-vertex_texcoord(cube, 0,0);
-
-vertex_position_3d(cube, 0.5,-0.5,0.5);
-vertex_color(cube, 0, 0.5);
-vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, 0.5,-0.5,-0.5);
-vertex_color(cube, 0, 0.5);
-vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, -0.5,-0.5,-0.5);
-vertex_color(cube, 0, 0.5);
-vertex_texcoord(cube, 0,0);
-
-vertex_position_3d(cube, 0.5,-0.5,-0.5);
-vertex_color(cube, 0, 0.5);
-vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, 0.5,-0.5,0.5);
-vertex_color(cube, 0, 0.5);
-vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, 0.5,0.5,0.5);
-vertex_color(cube, 0, 0.5);
-vertex_texcoord(cube, 0,0);
-
-vertex_position_3d(cube, 0.5,0.5,0.5);
-vertex_color(cube, 0, 0.5);
-vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, 0.5,0.5,-0.5);
-vertex_color(cube, 0, 0.5);
-vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, 0.5,-0.5,-0.5);
-vertex_color(cube, 0, 0.5);
-vertex_texcoord(cube, 0,0);
-
-vertex_position_3d(cube, 0.5,0.5,0.5);
-vertex_color(cube, 0, 0.5);
-vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, 0.5,-0.5,0.5);
-vertex_color(cube, 0, 0.5);
-vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, -0.5,-0.5,0.5);
-vertex_color(cube, 0, 0.5);
-vertex_texcoord(cube, 0,0);
-
-vertex_position_3d(cube, -0.5,-0.5,0.5);
-vertex_color(cube, 0, 0.5);
-vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, -0.5,0.5,0.5);
-vertex_color(cube, 0, 0.5);
-vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, 0.5,0.5,0.5);
+vertex_position_3d(cube, width, -width, width);
 vertex_color(cube, 0, 1.0);
 vertex_texcoord(cube, 0,0);
 
-vertex_position_3d(cube, -0.5,0.5,-0.5);
+vertex_position_3d(cube, width, -width, width);
 vertex_color(cube, 0, 1.0);
 vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, -0.5,-0.5,-0.5);
+vertex_position_3d(cube, width, -width, -width);
 vertex_color(cube, 0, 1.0);
 vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, 0.5,-0.5,-0.5);
-vertex_color(cube, 0, 1.0);
-vertex_texcoord(cube, 0,0);
-
-vertex_position_3d(cube, 0.5,-0.5,-0.5);
-vertex_color(cube, 0, 1.0);
-vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, 0.5,0.5,-0.5);
-vertex_color(cube, 0, 1.0);
-vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, -0.5,0.5,-0.5);
+vertex_position_3d(cube, -width, -width, -width;
 vertex_color(cube, 0, 1.0);
 vertex_texcoord(cube, 0,0);
 
-vertex_position_3d(cube, -0.5,0.5,-0.5);
+vertex_position_3d(cube, width, -width, -width);
 vertex_color(cube, 0, 1.0);
 vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, -0.5,0.5,0.5);
+vertex_position_3d(cube, width, -width, width);
 vertex_color(cube, 0, 1.0);
 vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, -0.5,-0.5,0.5);
-vertex_color(cube, 0, 1.0);
-vertex_texcoord(cube, 0,0);
-
-vertex_position_3d(cube, -0.5,-0.5,0.5);
-vertex_color(cube, 0, 1.0);
-vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, -0.5,-0.5,-0.5);
-vertex_color(cube, 0, 1.0);
-vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, -0.5,0.5,-0.5);
+vertex_position_3d(cube, width, width, width);
 vertex_color(cube, 0, 1.0);
 vertex_texcoord(cube, 0,0);
 
-vertex_position_3d(cube, 0.5,0.5,-0.5);
+vertex_position_3d(cube, width, width, width);
 vertex_color(cube, 0, 1.0);
 vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, 0.5,0.5,0.5);
+vertex_position_3d(cube, width, width, -width);
 vertex_color(cube, 0, 1.0);
 vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, -0.5,0.5,0.5);
+vertex_position_3d(cube, width, -width, -width);
 vertex_color(cube, 0, 1.0);
 vertex_texcoord(cube, 0,0);
 
-vertex_position_3d(cube, -0.5,0.5,0.5);
+vertex_position_3d(cube, width, width, width);
 vertex_color(cube, 0, 1.0);
 vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, -0.5,0.5,-0.5);
+vertex_position_3d(cube, width, -width, width);
 vertex_color(cube, 0, 1.0);
 vertex_texcoord(cube, 0,0);
-vertex_position_3d(cube, 0.5,0.5,-0.5);
+vertex_position_3d(cube, -width, -width, width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+
+vertex_position_3d(cube, -width, -width, width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+vertex_position_3d(cube, -width, width, width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+vertex_position_3d(cube, width, width, width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+
+vertex_position_3d(cube, -width, width, -width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+vertex_position_3d(cube, -width, -width, -width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+vertex_position_3d(cube, width, -width, -width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+
+vertex_position_3d(cube, width, -width, -width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+vertex_position_3d(cube, width, width, -width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+vertex_position_3d(cube, -width, width, -width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+
+vertex_position_3d(cube, -width, width, -width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+vertex_position_3d(cube, -width, width, width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+vertex_position_3d(cube, -width, -width, width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+
+vertex_position_3d(cube, -width, -width, width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+vertex_position_3d(cube, -width, -width, -width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+vertex_position_3d(cube, -width, width, -width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+
+vertex_position_3d(cube, width, width, -width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+vertex_position_3d(cube, width, width, width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+vertex_position_3d(cube, -width, width, width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+
+vertex_position_3d(cube, -width, width, width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+vertex_position_3d(cube, -width, width, -width);
+vertex_color(cube, 0, 1.0);
+vertex_texcoord(cube, 0,0);
+vertex_position_3d(cube, width, width, -width);
 vertex_color(cube, 0, 1.0);
 vertex_texcoord(cube, 0,0);
 

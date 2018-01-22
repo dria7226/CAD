@@ -51,6 +51,8 @@ void main()
 	
 		gl_Position.x *= screen_ratio;
 
+        glPosition.y *= -1;
+
 		gl_Position.w = 1.0;
 
 		v_vColor = vec4(v_a,1.0);//*dot((in_Position - camera_position)*length(in_Position - camera_position), in_Normal)*-0.5 ,1.0);
