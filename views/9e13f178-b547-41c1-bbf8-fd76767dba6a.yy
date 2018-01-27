@@ -12,7 +12,9 @@
         "cc8891ce-8d7e-48a0-9534-8c43811506ae",
         "32b72030-7754-460a-b026-3735acae9f7b",
         "d8064f88-c5ac-4848-9572-f59081510e50",
-        "55671c34-120d-4bf5-982d-cfacbe5faaa4"
+        "55671c34-120d-4bf5-982d-cfacbe5faaa4",
+        "5dbe7c42-1c41-42e0-9856-4fdb0bd31c9c",
+        "b49fbf9c-a750-4d51-9c49-8a7595de44a4"
     ],
     "filterType": "GMScript",
     "folderName": "Selection_Wheel",

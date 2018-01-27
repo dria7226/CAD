@@ -8,8 +8,7 @@ var radius = 1;
 
 var first_X = cos(0)*radius;
 var first_Y = sin(0)*radius;
-for(var angle = 2*pi/MAX; angle < 2*pi; angle += 2*pi/MAX)
-{
+for(var angle = 2*pi/MAX; angle <= 2*pi; angle += 2*pi/MAX){
 	var second_X = cos(angle)*radius;
 	var second_Y = sin(angle)*radius;
 	
@@ -34,11 +33,11 @@ for(var angle = 2*pi/MAX; angle < 2*pi; angle += 2*pi/MAX)
 	vertex_color(sphere, 0,1.0);
 	vertex_texcoord(sphere, 0,0);
 	
-	var first_Z = cos(2*pi/MAX)/2*radius;
-	for(var i = 2*2*pi/MAX; i < pi*(1 - 2/MAX); i += 2*pi/MAX)
+	var first_Z = cos(2*pi/MAX)*radius;
+	for(var i = 2*2*pi/MAX; i <= pi*(1 - 2/MAX); i += 2*pi/MAX)
 	{	
 		//body
-		var second_Z = cos(i+2*pi/MAX)/2*radius;
+		var second_Z = cos(i)*radius;
 		
 		vertex_position_3d(sphere, first_X*sin(i), first_Y*sin(i), first_Z);
 		vertex_color(sphere, 0,1.0);

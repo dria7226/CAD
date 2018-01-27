@@ -149,3 +149,7 @@ SCULPT_SUBMODE = gpi++;
 items[gpi, SW_TEXT] = "Draw Tool";
 items[gpi, SW_ACTION] = "choose_draw_submode";
 DRAW_SUBMODE = gpi++;
+
+items[gpi, SW_TEXT] = "Create a variable";
+items[gpi, SW_ACTION] = "make_variable_node";
+MAKE_VARIABLE = gpi++;

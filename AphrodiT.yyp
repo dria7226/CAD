@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "5dbe7c42-1c41-42e0-9856-4fdb0bd31c9c",
+            "Value": {
+                "id": "93845a6a-92fc-4c29-90c9-dd9b315d1e55",
+                "resourcePath": "scripts\\make_variable_node\\make_variable_node.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "6353679e-9812-4d8b-b73f-b9326c9627cd",
             "Value": {
                 "id": "8e262186-b311-4af0-948c-494531e65c4a",
@@ -611,6 +619,14 @@
             "Value": {
                 "id": "c34fca21-7453-4bcb-9fbb-87ac42de6f11",
                 "resourcePath": "scripts\\selection_wheel_math\\selection_wheel_math.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b49fbf9c-a750-4d51-9c49-8a7595de44a4",
+            "Value": {
+                "id": "c1c2629e-4126-4a8b-b10e-e5dccebfdb03",
+                "resourcePath": "scripts\\make_a_comment\\make_a_comment.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -911,6 +927,8 @@
         "c5918e73-490b-4f46-bc8f-288dca909521",
         "d8064f88-c5ac-4848-9572-f59081510e50",
         "55671c34-120d-4bf5-982d-cfacbe5faaa4",
+        "5dbe7c42-1c41-42e0-9856-4fdb0bd31c9c",
+        "b49fbf9c-a750-4d51-9c49-8a7595de44a4",
         "c9f5405f-3b63-4fa0-bf02-01fb365900f9",
         "5a8ca84c-61fc-457f-b312-7e13245bf55f",
         "c1a50f4e-5997-4bf0-8edd-a4a847ca0cf7",

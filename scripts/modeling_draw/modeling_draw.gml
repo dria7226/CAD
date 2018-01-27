@@ -7,7 +7,13 @@ shader_set_uniform_f(shader_get_uniform(standard, "near_clip"), 0.35);
 //shader_set_uniform_f(shader_get_uniform(standard, "far_clip"), 10000.0);
 shader_set_uniform_f(shader_get_uniform(standard, "screen_ratio"), CAD.w_height/CAD.w_width);
 
+var texture = -1
+
+shader_set_uniform_i(shader_get_uniform(standard, "texture_ID"), texture);
+
 for(var group = 0; group < ds_list_size(Modeling.triangle_groups); group++)
 {
-	vertex_submit(Modeling.triangle_groups[|group], pr_trianglelist, -1);
+	vertex_submit(Modeling.triangle_groups[|group], pr_trianglelist, texture);
 }
+
+shader_set_uniform_i(shader_get_uniform(standard, "texture_ID"), 0);
